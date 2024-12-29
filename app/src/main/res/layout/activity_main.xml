@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        android:background="@drawable/circularbackground"
+        android:layout_height="300dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+1min"
+            android:textSize="30dp"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timer"
+            android:text="00:00"
+            android:layout_centerInParent="true"
+            android:textSize="40dp"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="#673AB7"
+            android:layout_below="@id/timer"
+            android:id="@+id/blueline"
+            />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/blueline"
+            android:src="@drawable/startbutton"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:id="@+id/startbutton"
+            />
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/blueline"
+            android:src="@drawable/pauseimages"
+
+            android:layout_centerInParent="true"
+            android:id="@+id/pausebutton"
+            />
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/restartbutton"
+            android:layout_below="@+id/blueline"
+            android:src="@drawable/restartimage"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            />
+
+    </RelativeLayout>
+
+</LinearLayout>
